@@ -246,7 +246,6 @@ function toNumber(value, def) {
     result = def;
   } else {
     const numberCheck = Number(value) + 1;
-    console.log(numberCheck);
     if (Number.isNaN(numberCheck)) {
       result = def;
     } else {
