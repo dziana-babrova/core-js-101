@@ -478,7 +478,6 @@ function getMatrixProduct(m1, m2) {
       }
     }
   }
-  console.log(multiplication);
   return multiplication;
 }
 
