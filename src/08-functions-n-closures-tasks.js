@@ -24,9 +24,7 @@
  *
  */
 function getComposition(f, g) {
-  return function (x) {
-    return f(g(x));
-  };
+  return (x) => f(g(x));
 }
 
 
@@ -47,9 +45,7 @@ function getComposition(f, g) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (number) {
-    return number ** exponent;
-  };
+  return (number) => number ** exponent;
 }
 
 
@@ -212,7 +208,7 @@ function partialUsingArguments(fn, ...args1) {
  */
 function getIdGeneratorFunction(startFrom) {
   const idObject = {};
-  return () => {
+  return function f() {
     if (String(startFrom) in idObject) {
       idObject[String(startFrom)] += 1;
     } else {
